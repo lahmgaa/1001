@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>러블리 마요밍</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body { background:url('mama2.jpg'); width: 1280px; height: 720px; }
+		
+		#div1 {width: 512px; height: 288px; margin: auto; margin-top: 200px; }
+		#gif {width: 512px; height: 288px;  }
+		
+		#div2 {width: 1280px; height: 400px;}
+		#ma{
+			width: 150px; height: 150px;  margin-top:100px; margin-left: 200px;
+			animation-name: ma;
+			animation-duration: 4s;
+			animation: ma 4s  ; 
+			animation-play-state: paused;
+			opacity: 1;
+			z-index: 3;
+			animation-iteration-count: 1;
+		}
+		#ma:hover{cursor: pointer;}
+		@keyframes ma{
+			0%{  left:0%; top:0%; opacity: 1;}
+			100%{  left:100px; top:100px;
+				transform: rotate3D(7,5,8,360deg);
+				z-index: 3; 
+				opacity: 0;}
+		}
+		#yo{
+			width: 150px; height: 150px;  margin-top:100px; margin-left: 200px;
+			animation-name: yo;
+			animation-duration: 4s;
+			animation: ma 4s  ; 
+			animation-play-state: paused;
+			opacity: 1;
+			z-index: 3;
+			animation-iteration-count: 1;
+		}
+		#yo:hover{cursor: pointer;}
+		@keyframes yo{
+			0%{ left:0px; top:0px; opacity: 1;}
+			100%{  left:100px; top:100px;
+				transform: rotate3D(7,5,8,360deg);
+				z-index: 3; 
+				opacity: 0;}
+		}
+		#mii{
+			width: 150px; height: 150px; margin-top:100px; margin-left: 200px;
+			animation-name: mii;
+			animation-duration: 4s;
+			animation: mii 4s  ; 
+			animation-play-state: paused;
+			opacity: 1;
+			z-index: 3;
+			animation-iteration-count: 1;
+		}
+		#mii:hover{cursor: pointer;}
+		@keyframes mii{
+			0%{ left:0px; top:0px; opacity: 1;}
+			100%{  left:100px; top:100px;
+				transform: rotate3D(7,5,8,360deg);
+				z-index: 3; 
+				opacity: 0;}
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="div1" ><img src="mama.jpg" id="gif"></div>
+	
+	<div id="div2">
+	<img src="ma.png" id="ma">
+	<audio id="made1_1">
+		<source src="made1_1.mp3" type="audio/mpeg">
+	</audio>
+	<script type="text/javascript">
+		ma.onclick = function(){
+			ma.style.animationPlayState = "running";
+			gif.setAttribute("src","made1_1.gif");
+			made1_1.play();
+		}
+	</script>
+
+	<img src="yo.png" id="yo">
+	<audio id="made2_1">
+		<source src="made2_1.mp3" type="audio/mpeg">
+	</audio>
+
+	<script type="text/javascript">
+		yo.onclick = function(){
+			yo.style.animationPlayState = "running";
+			gif.setAttribute("src","made2_1.gif");
+			made2_1.play();
+		}
+	</script>
+
+	<img src="mii.png" id="mii">
+	<audio id="apple2_1">
+		<source src="apple2_1.mp3" type="audio/mpeg">
+	</audio>
+
+	<script type="text/javascript">
+		mii.onclick = function(){
+			mii.style.animationPlayState = "running";
+			gif.setAttribute("src","apple2_1.gif");
+			apple2_1.play();
+			
+		}
+	</script>
+	</div>
+	
+</body>
+</html>
